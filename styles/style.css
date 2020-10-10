@@ -1,0 +1,238 @@
+/* sections */
+
+@import "./header.css";
+@import "./first-article.css";
+@import "./second-article.css";
+@import "./third-article.css";
+@import "./footer.css";
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* BUTTON */
+
+.button-first-wrapper {
+	background-color: #FB8F1D;
+	margin-top: 39px;
+	width: 164px;
+	height: 48px;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+
+.button-first {
+	color: white;
+	font-family: 'Inter', sans-serif;
+}
+
+.button-first-wrapper:hover {
+	background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+
+.button-first-wrapper:active {
+	background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+/* BUTTON-END */
+
+@media screen and (max-width: 768px) {
+	.first-article {
+		flex-direction: column;
+		align-items: center;
+	}
+	.first-article-image {
+		display: none;
+		width: 0;
+	}
+	.second-article {
+		flex-direction: column;
+		align-items: center;
+	}
+	.second-article-image {
+		display: none;
+		width: 0;
+	}
+	.third-article-title-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+	.view-all-button {
+		padding-top: 0;
+	}
+	.container-stories {
+		flex-direction: column;
+		align-items: center;
+	}
+	.header-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 50px;
+		padding: 0 50px;
+		background-color: #393E41;
+		z-index: 2;
+	}
+	.main-logo {
+		position: relative;
+		z-index: 5;
+	}
+	.main-nav a {
+		display: block;
+		position: relative;
+		text-align: left;
+		margin-bottom: 80px;
+	}
+	.main-nav {
+		position: absolute;
+		top: 100px;
+		left: -300px;
+		margin-left: 50px;
+		transition: all .3s;
+	}
+	.nav-home {
+		color: #98C1D9;
+		font-weight: 700;
+	}
+	/* .buttons-auth {
+		display: none;
+	} */
+	.button-login-wrapper {
+		width: 80px;
+		height: 25px;
+	}
+	.button-register-wrapper {
+		width: 80px;
+		height: 25px;
+	}
+	.first-article {
+		margin: 0 auto;
+		max-width: 768px;
+	}
+	/*burger*/
+	.burger-menu {
+		position: fixed;
+		top: 0;
+		left: -250px;
+		width: 250px;
+		height: 100%;
+		padding: 0 50px;
+		background-color: #393E41;
+		z-index: 2;
+		transition: all .3s;
+	}
+	.active {
+		left: 0;
+		transition: all .3s;
+	}
+	.active-burger::before {
+		transform: rotate(-45deg);
+		transition: all .3s;
+	}
+	.active-burger::after {
+		transform: rotate(45deg);
+		transition: all .3s;
+	}
+	.burger-container.active-burger {
+		height: 2px;
+	}
+	.burger-container.active-burger span {
+		transform: scale(0);
+	}
+	.burger-container {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		z-index: 3;
+	}
+	.burger-container span {
+		background-color: #98C1D9;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		top: 9px;
+	}
+	.burger-container:before, .burger-container:after {
+		content: '';
+		background-color: #98C1D9;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+	}
+	.burger-container:before {
+		top: 0;
+	}
+	.burger-container:after {
+		bottom: 0;
+	}
+	/* first-article */
+	.first-article .first-article-info {
+		margin-top: 50px;
+		padding: 0;
+	}
+	/* second-article */
+	.rating .author-name .author-role {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	:root {
+		font-size: 12px;
+	}
+	.header-container {
+		padding: 0 10px;
+	}
+	.first-article {
+		padding: 0 0 0 0;
+	}
+	.first-article-info {
+		max-width: 320px;
+		display: flex;
+		flex-direction: column;
+	}
+	.second-article-info {
+		max-width: 320px;
+		margin: 0 auto;
+	}
+	.container-stories {
+		max-width: 100%;
+		flex-direction: column;
+	}
+	.footer-img {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container-stories {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		margin: 0 auto;
+	}
+	.stories {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.container-stories {
+		max-width: 100%;
+		justify-content: space-around;
+	}
+}
