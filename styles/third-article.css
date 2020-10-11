@@ -33,6 +33,11 @@
     padding-top: 100px;
 }
 
+.view-all-button:hover{
+    font-size: 20px;
+    transition: all .3s;
+}
+
 .stories {
     display: flex;
     flex-direction: row;
@@ -86,6 +91,7 @@
     padding-top: 23px;
 }
 
+
 #read-more {
     font-family: Inter;
     font-style: normal;
@@ -95,7 +101,10 @@
     line-height: 28px;
     color: #FB8F1D;
 }
-
+#read-more:hover{
+    font-size:18px;
+    transition: all .3s;
+}
 /* story-images */
 
 .image-story {

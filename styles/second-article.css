@@ -102,6 +102,11 @@
     z-index: 3;
 }
 
+.big-cross:hover{
+    transform: rotate(1080deg);
+    transition: all 3s;
+}
+
 .big-circle {
     position: absolute;
     top: 170px;
